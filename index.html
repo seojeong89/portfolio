@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <script src="./js/common.js"></script>
+  </head>
+  <body>
+    <!-- Top_Button -->
+    <div class="go_top">
+      <i class="xi-caret-up-circle"></i>
+    </div>
+    <!-- header -->
+    <header>
+      <div class="nav">
+        <div class="container">
+          <h4>Seojeong’s Portfolio</h4>
+          <a href="#" class="btn" id="open_profile">About me</a>
+          <ul class="menu">
+            <li><a href="#">Publising</a></li>
+            <li><a href="#">Web design</a></li>
+            <li><a href="#">UI/UX</a></li>
+            <li><a href="#">Banner</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="header">
+        <img class="snowman" src="./image/header_img.png" alt="snowman" />
+        <img class="snow" src="./image/snow.png" class="snow" alt="snow" />
+        <h2 class="top_ani">Seojeong’s Portfolio</h2>
+        <div class="go_down">
+          <i class="xi-caret-down-circle-o"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- About me 모달 -->
+    <div class="dimm"></div>
+    <div class="profile_modal">
+      <i class="xi-close-circle" id="close_profile"></i>
+      <div class="info_01">
+        <div class="photo"><box></box></div>
+        <h4>양서정</h4>
+        <p>1989. 01 .09</p>
+      </div>
+      <div class="info_02">
+        <p><span>Phone : </span>010. 8944. 1378</p>
+        <p><span>E-mail : </span>halim1378@gmail.com</p>
+        <span>학력사항</span>
+        <p>2010.02 신라대학교 졸업</p>
+        <p>2020.08 - 12 웹디자인(웹퍼블리셔) 프론트앤드 과정 수료</p>
+        <span>자격증</span>
+        <p>2015. 07 GTQ 포토샵 1급</p>
+        <p>2017. 07 컴퓨터활용능력 1급</p>
+      </div>
+      <div class="info_03"></div>
+    </div>
+
+    <section id="fullpage">
+      <!-- section_01 -->
+      <div class="section section_01">
+        <div class="container">
+          <h2>Publising</h2>
+          <p>페이지를 디자인하여 실제로 브라우저상에서 구동될수 있게 코딩하였습니다.</p>
+          <div class="contents">
+            <div class="item_01">
+              <img class="box" src="./image/contents01_img01.jpg" alt="img" />
+              <h3>Mountain</h3>
+              <p>
+                산을 주제로 페이지를 디자인하여 <br />Html, Css, JavaScript 를 이용하여<br />
+                코딩하였습니다.
+              </p>
+              <a href="#"><div class="btn">Click</div></a>
+            </div>
+
+            <div class="item_02">
+              <img class="box" src="./image/contents01_img02.jpg" alt="img" />
+              <h3>Mountain</h3>
+              <p>
+                산을 주제로 페이지를 디자인하여 <br />Html, Css, JavaScript 를 이용하여<br />
+                코딩하였습니다.
+              </p>
+              <a href="#"><div class="btn">Click</div></a>
+            </div>
+
+            <div class="item_03">
+              <img class="box" src="./image/contents01_img03.jpg" alt="img" />
+              <h3>Mountain</h3>
+              <p>
+                산을 주제로 페이지를 디자인하여 <br />Html, Css, JavaScript 를 이용하여<br />
+                코딩하였습니다.
+              </p>
+              <a href="#"><div class="btn">Click</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- section_02 -->
+      <div class="section section_02">
+        <div class="container">
+          <h2>Web design</h2>
+          <p>
+            Figma, Photoshop, Ilalustrator 사용하여 페이지 레이아웃을 구성하여 디자인하였습니다.
+          </p>
+          <ul class="contents">
+            <li class="item item_01">
+              <img
+                class="box"
+                src="./image/contents02_img01.jpg"
+                data-img="./image/webpage-01.jpg"
+                alt="img"
+              />
+              <div class="text">
+                <h3>Seven Coffee</h3>
+                <p>
+                  커피를 주제로 하여 <br />
+                  가상의 커피 브랜드 소개 페이지를 디자인하였습니다.
+                </p>
+                <div class="btn">Click</div>
+              </div>
+            </li>
+
+            <li class="item item_02">
+              <div class="text">
+                <h3>Seven Coffee</h3>
+                <p>
+                  커피를 주제로 하여 <br />
+                  가상의 커피 브랜드 소개 페이지를 디자인하였습니다.
+                </p>
+                <div class="btn">Click</div>
+              </div>
+              <img
+                class="box"
+                src="./image/contents02_img02.jpg"
+                data-img="./image/webpage-02.jpg"
+                alt="img"
+              />
+            </li>
+
+            <li class="item item_03">
+              <img
+                class="box"
+                src="./image/contents02_img03.jpg"
+                data-img="./image/webpage-03.jpg"
+                alt="img"
+              />
+              <div class="text">
+                <h3>Seven Coffee</h3>
+                <p>
+                  커피를 주제로 하여 <br />
+                  가상의 커피 브랜드 소개 페이지를 디자인하였습니다.
+                </p>
+                <div class="btn">Click</div>
+              </div>
+            </li>
+
+            <li class="item item_04">
+              <div class="text">
+                <h3>Seven Coffee</h3>
+                <p>
+                  커피를 주제로 하여 <br />
+                  가상의 커피 브랜드 소개 페이지를 디자인하였습니다.
+                </p>
+                <div class="btn">Click</div>
+              </div>
+              <img
+                class="box"
+                src="./image/contents02_img04.jpg"
+                data-img="./image/webpage-04.jpg"
+                alt="img"
+              />
+            </li>
+          </ul>
+          <div class="dimm_01">
+            <img src="" alt="big_img" />
+          </div>
+        </div>
+      </div>
+
+      <!-- section_03 -->
+      <div class="section section_03">
+        <div class="container">
+          <h2>UI/UX</h2>
+          <p>Figma와 Illustrator를 사용하여 모바일 앱 화면을 다양하게 디자인 하였습니다.</p>
+          <ul class="cards">
+            <li class="card"><img src="./image/contents03_img01.jpg" alt="img" /></li>
+            <li class="card"><img src="./image/contents03_img02.jpg" alt="img" /></li>
+            <li class="card"><img src="./image/contents03_img03.jpg" alt="img" /></li>
+            <li class="card"><img src="./image/contents03_img04.jpg" alt="img" /></li>
+            <li class="card"><img src="./image/contents03_img05.jpg" alt="img" /></li>
+            <li class="card"><img src="./image/contents03_img06.jpg" alt="img" /></li>
+            <li class="card"><img src="./image/contents03_img07.jpg" alt="img" /></li>
+            <li class="card"><img src="./image/contents03_img08.jpg" alt="img" /></li>
+            <li class="card"><img src="./image/contents03_img09.jpg" alt="img" /></li>
+            <li class="card"><img src="./image/contents03_img10.jpg" alt="img" /></li>
+          </ul>
+        </div>
+        <div class="container">
+          <div class="app_modal_01">
+            <ul class="app_modal">
+              <li><img src="./image/app-01-01.png" alt="app01" /></li>
+              <li><img src="./image/app-01-02.png" alt="app01" /></li>
+              <li><img src="./image/app-01-03.png" alt="app01" /></li>
+              <li><img src="./image/app-01-04.png" alt="app01" /></li>
+              <li><img src="./image/app-01-05.png" alt="app01" /></li>
+              <li><img src="./image/app-01-06.png" alt="app01" /></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- section_04 -->
+      <div class="section section_04">
+        <div class="container">
+          <h2>Banner</h2>
+          <p>Figma와 Photoshop을 사용해서 이벤트 배너를 디자인 하였습니다.</p>
+          <div class="banner_slick">
+            <div>
+              <img src="./image/banner-01.jpg" alt="img" />
+            </div>
+            <div>
+              <img src="./image/banner-02.jpg" alt="img" />
+            </div>
+            <div>
+              <img src="./image/banner-03.jpg" alt="img" />
+            </div>
+            <div>
+              <img src="./image/banner-04.jpg" alt="img" />
+            </div>
+            <div>
+              <img src="./image/banner-05.jpg" alt="img" />
+            </div>
+            <div>
+              <img src="./image/banner-06.jpg" alt="img" />
+            </div>
+            <div>
+              <img src="./image/banner-07.jpg" alt="img" />
+            </div>
+            <div>
+              <img src="./image/banner-08.jpg" alt="img" />
+            </div>
+            <div>
+              <img src="./image/banner-09.jpg" alt="img" />
+            </div>
+            <div>
+              <img src="./image/banner-10.jpg" alt="img" />
+            </div>
+            <div>
+              <img src="./image/banner-11.jpg" alt="img" />
+            </div>
+            <div>
+              <img src="./image/banner-12.jpg" alt="img" />
+            </div>
+            <div>
+              <img src="./image/banner-13.jpg" alt="img" />
+            </div>
+            <div>
+              <img src="./image/banner-14.jpg" alt="img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <div class="footer">
+      <p>halim1378@gmail.com</p>
+    </div>
+
+    <!-- 슬릭 -->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <script>
+      $(".banner_slick").slick({
+        dots: true,
+        slidesToShow: 5,
+        slidesToScroll: 2,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,411 @@
+/* ============================== go_top */
+.go_top {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  transform: translateY(-50%);
+  z-index: 10;
+  font-size: 50px;
+  color: var(--gray);
+  cursor: pointer;
+  display: none;
+}
+
+/* ============================== header  */
+header {
+  background: var(--white);
+  height: 960px;
+  position: relative;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.nav .container {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.nav h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 60px;
+  margin-right: 30px;
+}
+
+.nav .btn {
+  background: var(--pink);
+  color: #fff;
+  margin-right: auto;
+}
+
+.nav .menu {
+  display: flex;
+}
+
+.nav .menu a {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  margin-left: 50px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.nav .menu a:hover {
+  color: var(--pink);
+  transition: color 0.3s;
+}
+
+.header .snowman,
+.header .snow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header .snowman {
+  width: 500px;
+}
+
+.header .snow {
+  width: 780px;
+  opacity: 0;
+  animation: grow 0.8s 0.8s 2 forwards;
+}
+
+.header h2 {
+  text-align: center;
+  line-height: 1.5;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header i {
+  font-size: 50px;
+  color: var(--pink);
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.header i:hover {
+  color: var(--gray);
+}
+
+/* ============================== About me 모달 */
+.dimm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  display: none;
+}
+
+.profile_modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 500px;
+  background: #fff;
+  border-radius: 30px;
+  border: 2px solid var(--pink);
+  box-sizing: border-box;
+  z-index: 3;
+  display: none;
+}
+
+.profile_modal p {
+  font-size: 14px;
+  color: var(--black);
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.profile_modal i {
+  color: var(--pink);
+  font-size: 50px;
+  position: absolute;
+  top: 2%;
+  right: 1%;
+  cursor: pointer;
+}
+
+.profile_modal .info_01 box {
+  position: absolute;
+  top: 8%;
+  left: 10%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: var(--gray);
+}
+
+.profile_modal .info_01 h4 {
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 19%;
+}
+
+.profile_modal .info_01 p {
+  position: absolute;
+  top: 56%;
+  left: 17.5%;
+}
+
+.profile_modal .info_02 {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+}
+
+.profile_modal .info_02 span {
+  font-weight: 700;
+}
+
+/* ============================== section_01  */
+
+.section_01 h2 {
+  text-align: center;
+}
+
+.section_01 p {
+  margin-bottom: 50px;
+}
+
+.section_01 .contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section_01 .box {
+  margin-bottom: 30px;
+}
+
+.section_01 .contents p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section_01 .btn {
+  margin: 0 auto;
+}
+
+/* ============================== section_02  */
+
+.section_02 {
+  background: var(--white);
+}
+
+.section_02 .contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section_02 p {
+  margin-bottom: 30px;
+}
+
+.section_02 .item {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.section_02 .box {
+  width: 220px;
+  height: 220px;
+  margin: 0 100px;
+}
+
+.section_02 .item_02,
+.section_02 .item_04 {
+  text-align: right;
+}
+
+.section_02 .item_02 .btn,
+.section_02 .item_04 .btn {
+  margin-left: auto;
+}
+
+.section_02 .text p {
+  margin-bottom: 40px;
+}
+
+/* ============================== 라이트박스 */
+.dimm_01 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  visibility: hidden;
+  z-index: 2;
+  overflow-y: auto;
+}
+
+.dimm_01 img {
+  position: absolute;
+  top: 0;
+  width: 50%;
+}
+
+.show {
+  visibility: visible;
+}
+
+/* ============================== section_03  */
+.section_03 p {
+  margin-bottom: 50px;
+}
+
+.section_03 .cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 50px;
+}
+
+.section_03 .card {
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.section_03 .card:hover {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+  transform: scale(1.2);
+}
+
+/* ============================ section_03 modal */
+
+.app_modal_01 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  overflow-y: auto;
+  display: none;
+}
+
+.app_modal {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.app_modal li {
+  width: 375px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* ============================== section_04  */
+.section_04 {
+  background: var(--white);
+}
+
+.section_04 img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+/* 슬릭 */
+.slick-dotted.slick-slider {
+  margin: 50px 0;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: var(--gray);
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.slick-prev:before {
+  margin-left: -30px;
+}
+
+.slick-dots {
+  margin: -20px 0;
+}
+
+.slick-initialized .slick-slide {
+  outline: none;
+}
+
+/* ============================== footer  */
+.footer {
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* ============================== */
+
+.not_scroll {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.not_scroll .cont {
+  position: relative;
+  top: 0;
+}
+
+/* ============================== 애니메이션 */
+@keyframes grow {
+  100% {
+    opacity: 1;
+  }
+}
