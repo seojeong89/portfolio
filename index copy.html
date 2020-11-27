@@ -42,24 +42,21 @@
     <div class="go_top">
       <i class="xi-caret-up-circle"></i>
     </div>
-
-    <!-- 네브 -->
-    <div class="nav">
-      <div class="container">
-        <a data-menuanchor="page1" href="#page1"><h4>Seojeong’s Portfolio</h4></a>
-
-        <a href="profile.html" class="profile btn">About me</a>
-        <ul class="menu">
-          <li><a data-menuanchor="page2" href="#page2">Publising</a></li>
-          <li><a data-menuanchor="page3" href="#page3">Web design</a></li>
-          <li><a data-menuanchor="page4" href="#page4">UI/UX</a></li>
-          <li><a data-menuanchor="page5" href="#page5">Banner</a></li>
-        </ul>
+    <!-- header -->
+    <header>
+      <div class="nav">
+        <div class="container">
+          <h4>Seojeong’s Portfolio</h4>
+          <a href="profile.html" class="profile btn">About me</a>
+          <ul class="menu">
+            <li><a href="#">Publising</a></li>
+            <li><a href="#">Web design</a></li>
+            <li><a href="#">UI/UX</a></li>
+            <li><a href="#">Banner</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-
-    <!-- 해더 -->
-    <!-- 풀페이지 시작 -->
+    </header>
     <section id="fullpage">
       <div class="section header">
         <img class="snowman" src="./image/header_img.png" alt="snowman" />
@@ -70,14 +67,14 @@
         </div>
       </div>
 
-      <!-- 섹션-01 -->
+      <!-- section_01 -->
       <div class="section section_01">
         <div class="container">
           <h2>Publising</h2>
           <p>페이지를 디자인하여 실제로 브라우저상에서 구동될수 있게 코딩하였습니다.</p>
           <div class="contents">
             <div class="item_01">
-              <img src="./image/contents01_img01.jpg" alt="img" />
+              <img class="box" src="./image/contents01_img01.jpg" alt="img" />
               <h3>Mountain</h3>
               <p>
                 산을 주제로 페이지를 디자인하여 <br />Html, Css, JavaScript 를 이용하여<br />
@@ -87,7 +84,7 @@
             </div>
 
             <div class="item_02">
-              <img src="./image/contents01_img02.jpg" alt="img" />
+              <img class="box" src="./image/contents01_img02.jpg" alt="img" />
               <h3>Mountain</h3>
               <p>
                 산을 주제로 페이지를 디자인하여 <br />Html, Css, JavaScript 를 이용하여<br />
@@ -97,7 +94,7 @@
             </div>
 
             <div class="item_03">
-              <img src="./image/contents01_img03.jpg" alt="img" />
+              <img class="box" src="./image/contents01_img03.jpg" alt="img" />
               <h3>Mountain</h3>
               <p>
                 산을 주제로 페이지를 디자인하여 <br />Html, Css, JavaScript 를 이용하여<br />
@@ -109,87 +106,89 @@
         </div>
       </div>
 
-      <!-- 섹션-02 -->
+      <!-- section_02 -->
       <div class="section section_02">
         <div class="container">
           <h2>Web design</h2>
           <p>
             Figma, Photoshop, Ilalustrator 사용하여 페이지 레이아웃을 구성하여 디자인하였습니다.
           </p>
-
-          <ul class="items">
-            <li class="item">
-              <img src="./image/webpage-01 1_1.jpg" alt="img" />
-              <div class="line_box"></div>
-              <h3>Seven Coffee</h3>
-              <div class="dimm"></div>
-              <i class="xi-zoom-in"></i>
+          <ul class="contents">
+            <li class="item item_01">
+              <img
+                class="box"
+                src="./image/contents02_img01.jpg"
+                data-img="./image/webpage-01.jpg"
+                alt="img"
+              />
+              <div class="text">
+                <h3>Seven Coffee</h3>
+                <p>
+                  커피를 주제로 하여 <br />
+                  가상의 커피 브랜드 소개 페이지를 디자인하였습니다.
+                </p>
+                <div class="btn">Click</div>
+              </div>
             </li>
 
-            <li class="item">
-              <img src="./image/webpage-02 1_1.jpg" data-img="./image/webpage-01.jpg" alt="img" />
-              <div class="line_box"></div>
-              <div class="dimm"></div>
-              <h3>Seven Coffee</h3>
-              <i class="xi-zoom-in"></i>
+            <li class="item item_02">
+              <div class="text">
+                <h3>Seven Coffee</h3>
+                <p>
+                  커피를 주제로 하여 <br />
+                  가상의 커피 브랜드 소개 페이지를 디자인하였습니다.
+                </p>
+                <div class="btn">Click</div>
+              </div>
+              <img
+                class="box"
+                src="./image/contents02_img02.jpg"
+                data-img="./image/webpage-02.jpg"
+                alt="img"
+              />
             </li>
 
-            <li class="item">
-              <img src="./image/webpage-03 1_1.jpg" data-img="./image/webpage-01.jpg" alt="img" />
-              <div class="line_box"></div>
-              <div class="dimm"></div>
-              <h3>Seven Coffee</h3>
-              <i class="xi-zoom-in"></i>
+            <li class="item item_03">
+              <img
+                class="box"
+                src="./image/contents02_img03.jpg"
+                data-img="./image/webpage-03.jpg"
+                alt="img"
+              />
+              <div class="text">
+                <h3>Seven Coffee</h3>
+                <p>
+                  커피를 주제로 하여 <br />
+                  가상의 커피 브랜드 소개 페이지를 디자인하였습니다.
+                </p>
+                <div class="btn">Click</div>
+              </div>
             </li>
 
-            <li class="item">
-              <img src="./image/webpage-04 1_1.jpg" data-img="./image/webpage-01.jpg" alt="img" />
-              <div class="line_box"></div>
-              <div class="dimm"></div>
-              <h3>Seven Coffee</h3>
-              <i class="xi-zoom-in"></i>
-            </li>
-
-            <li class="item">
-              <img src="./image/event-page-01_1.jpg" data-img="./image/webpage-01.jpg" alt="img" />
-              <div class="line_box"></div>
-              <div class="dimm"></div>
-              <h3>Seven Coffee</h3>
-              <i class="xi-zoom-in"></i>
-            </li>
-
-            <li class="item">
-              <img src="./image/event-page-02_1.jpg" data-img="./image/webpage-01.jpg" alt="img" />
-              <div class="line_box"></div>
-              <div class="dimm"></div>
-              <h3>Seven Coffee</h3>
-              <i class="xi-zoom-in"></i>
-            </li>
-
-            <li class="item">
-              <img src="./image/event-page-03_1.jpg" data-img="./image/webpage-01.jpg" alt="img" />
-              <div class="line_box"></div>
-              <div class="dimm"></div>
-              <h3>Seven Coffee</h3>
-              <i class="xi-zoom-in"></i>
-            </li>
-
-            <li class="item">
-              <img src="./image/event-page-04_1.jpg" data-img="./image/webpage-01.jpg" alt="img" />
-              <div class="line_box"></div>
-              <div class="dimm"></div>
-              <h3>Seven Coffee</h3>
-              <i class="xi-zoom-in"></i>
+            <li class="item item_04">
+              <div class="text">
+                <h3>Seven Coffee</h3>
+                <p>
+                  커피를 주제로 하여 <br />
+                  가상의 커피 브랜드 소개 페이지를 디자인하였습니다.
+                </p>
+                <div class="btn">Click</div>
+              </div>
+              <img
+                class="box"
+                src="./image/contents02_img04.jpg"
+                data-img="./image/webpage-04.jpg"
+                alt="img"
+              />
             </li>
           </ul>
-
-          <!-- <div class="dimm_01">
+          <div class="dimm_01">
             <img src="" alt="big_img" />
-          </div> -->
+          </div>
         </div>
       </div>
 
-      <!-- 섹션-03 -->
+      <!-- section_03 -->
       <div class="section section_03">
         <div class="container">
           <h2>UI/UX</h2>
@@ -221,7 +220,7 @@
         </div>
       </div>
 
-      <!-- 섹션-04 -->
+      <!-- section_04 -->
       <div class="section section_04">
         <div class="container">
           <h2>Banner</h2>
@@ -274,7 +273,7 @@
       </div>
     </section>
 
-    <!-- 푸터 -->
+    <!-- footer -->
     <div class="footer">
       <p>halim1378@gmail.com</p>
     </div>
@@ -299,14 +298,6 @@
         $(".profile").magnificPopup({
           type: "ajax",
         });
-      });
-
-      // 풀페이지
-      $("#fullpage").fullpage({
-        navigation: true,
-        menu: ".nav",
-        anchors: ["page1", "page2", "page3", "page4", "page5"],
-        responsive: 0,
       });
     </script>
   </body>

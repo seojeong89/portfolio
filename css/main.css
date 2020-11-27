@@ -11,12 +11,7 @@
   display: none;
 }
 
-/* ============================== header  */
-header {
-  background: var(--white);
-  height: 960px;
-  position: relative;
-}
+/* ============================== nav  */
 
 .nav {
   position: fixed;
@@ -32,6 +27,7 @@ header {
 .nav .container {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0;
 }
 
@@ -64,6 +60,10 @@ header {
 .nav .menu a:hover {
   color: var(--pink);
   transition: color 0.3s;
+}
+
+.header {
+  background: var(--white);
 }
 
 .header .snowman,
@@ -107,83 +107,6 @@ header {
   color: var(--gray);
 }
 
-/* ============================== About me 모달 */
-.dimm {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 2;
-  display: none;
-}
-
-.profile_modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 800px;
-  height: 500px;
-  background: #fff;
-  border-radius: 30px;
-  border: 2px solid var(--pink);
-  box-sizing: border-box;
-  z-index: 3;
-  display: none;
-}
-
-.profile_modal p {
-  font-size: 14px;
-  color: var(--black);
-  margin-bottom: 10px;
-  font-weight: 400;
-}
-
-.profile_modal i {
-  color: var(--pink);
-  font-size: 50px;
-  position: absolute;
-  top: 2%;
-  right: 1%;
-  cursor: pointer;
-}
-
-.profile_modal .info_01 box {
-  position: absolute;
-  top: 8%;
-  left: 10%;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: var(--gray);
-}
-
-.profile_modal .info_01 h4 {
-  font-size: 20px;
-  font-weight: 700;
-  position: absolute;
-  top: 50%;
-  left: 19%;
-}
-
-.profile_modal .info_01 p {
-  position: absolute;
-  top: 56%;
-  left: 17.5%;
-}
-
-.profile_modal .info_02 {
-  position: absolute;
-  top: 15%;
-  right: 10%;
-}
-
-.profile_modal .info_02 span {
-  font-weight: 700;
-}
-
 /* ============================== section_01  */
 
 .section_01 h2 {
@@ -200,7 +123,11 @@ header {
   justify-content: space-between;
 }
 
-.section_01 .box {
+.section_01 img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #ccc;
   margin-bottom: 30px;
 }
 
@@ -219,7 +146,92 @@ header {
   background: var(--white);
 }
 
-.section_02 .contents {
+.section_02 p {
+  margin-bottom: 50px;
+}
+
+.section_02 .items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+
+.section_02 .items .item {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.section_02 .items .item {
+  width: 250px;
+  height: 300px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.section_02 h3 {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+  font-size: 20px;
+}
+
+.line_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 20%;
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s;
+}
+
+.section_02 .item i {
+  color: #fff;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  font-size: 46px;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+}
+
+.section_02 .dimm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.section_02 .items .item:hover .dimm {
+  opacity: 1;
+}
+
+.section_02 .items .item:hover h3,
+.section_02 .items .item:hover .line_box {
+  top: -20%;
+}
+
+.section_02 .items .item:hover i {
+  top: 50%;
+}
+
+/* .section_02 .items .item:hover img {
+  transform: scale(1.1);
+} */
+
+/* ======================================= */
+
+/* .section_02 .contents {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -254,7 +266,7 @@ header {
 
 .section_02 .text p {
   margin-bottom: 40px;
-}
+} */
 
 /* ============================== 라이트박스 */
 .dimm_01 {
@@ -276,6 +288,7 @@ header {
 .dimm_01 img {
   position: absolute;
   top: 0;
+
   width: 50%;
 }
 

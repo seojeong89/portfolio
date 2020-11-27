@@ -16,10 +16,10 @@ body {
 }
 
 .container {
-  max-width: 1240px;
   width: 94%;
+  max-width: 1240px;
   text-align: center;
-  padding: 70px 0;
+  /* padding: 70px 0; */
   margin: 0 auto;
 }
 
@@ -57,10 +57,10 @@ p {
   color: #fff;
 }
 
-.box {
+/* .box {
   width: 300px;
   height: 300px;
   border-radius: 50%;
   background: #ccc;
   overflow: hidden;
-}
+} */
