@@ -201,7 +201,7 @@
   transition: all 0.3s;
 }
 
-.section_02 .dimm {
+.section_02 .span {
   position: absolute;
   top: 0;
   left: 0;
@@ -212,7 +212,7 @@
   transition: all 0.3s;
 }
 
-.section_02 .items .item:hover .dimm {
+.section_02 .items .item:hover .span {
   opacity: 1;
 }
 
@@ -225,75 +225,22 @@
   top: 50%;
 }
 
-/* .section_02 .items .item:hover img {
-  transform: scale(1.1);
-} */
-
-/* ======================================= */
-
-/* .section_02 .contents {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+  padding: 0;
 }
-
-.section_02 p {
-  margin-bottom: 30px;
-}
-
-.section_02 .item {
-  display: flex;
-  align-items: center;
-  margin-top: 50px;
-  text-align: left;
-}
-
-.section_02 .box {
-  width: 220px;
-  height: 220px;
-  margin: 0 100px;
-}
-
-.section_02 .item_02,
-.section_02 .item_04 {
-  text-align: right;
-}
-
-.section_02 .item_02 .btn,
-.section_02 .item_04 .btn {
-  margin-left: auto;
-}
-
-.section_02 .text p {
-  margin-bottom: 40px;
-} */
-
-/* ============================== 라이트박스 */
-.dimm_01 {
-  position: fixed;
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  visibility: hidden;
-  z-index: 2;
-  overflow-y: auto;
+  bottom: 0;
+}
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+  padding: 0;
 }
 
-.dimm_01 img {
-  position: absolute;
-  top: 0;
-
-  width: 50%;
-}
-
-.show {
-  visibility: visible;
+img.mfp-img {
+  /* max-height: 2000px !important; */
 }
 
 /* ============================== section_03  */
@@ -404,7 +351,7 @@
 
 /* ============================== */
 
-.not_scroll {
+/* .not_scroll {
   position: fixed;
   overflow: hidden;
   width: 100%;
@@ -414,7 +361,7 @@
 .not_scroll .cont {
   position: relative;
   top: 0;
-}
+} */
 
 /* ============================== 애니메이션 */
 @keyframes grow {

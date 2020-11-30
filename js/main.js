@@ -1,22 +1,4 @@
-// About me 모달
 $(function () {
-  //   var openBtn = $("#open_profile");
-  //   var closeBtn = $("#close_profile");
-  //   var dimm = $(".dimm");
-  //   var modal = $(".profile_modal");
-
-  //   openBtn.click(function () {
-  //     dimm.show();
-  //     modal.show();
-  //     $("html, body").addClass("not_scroll");
-  //   });
-
-  //   closeBtn.click(function () {
-  //     dimm.hide();
-  //     modal.hide();
-  //     $("html, body").removeClass("not_scroll");
-  //   });
-
   // go_top 버튼
   var goTop = $(".go_top");
   $(window).scroll(function () {
@@ -48,8 +30,16 @@ $(function () {
     delay: 300,
   });
 
+  // About me 모달
   $(".popup").magnificPopup({
+    type: "ajax",
+  });
+
+  // 섹션_02 모달
+  $(".image-popup").magnificPopup({
     type: "image",
+
+    closeOnBgClick: true,
     closeOnContentClick: true,
     mainClass: "mfp-img-mobile",
     image: {
@@ -79,49 +69,4 @@ $(function () {
   //   $("html, body").removeClass("not_scroll");
   //   posY = $(window).scrollTop(posY);
   // });
-
-  // section_03 모달
-  // var viewBtn = $(".cards img");
-  // var app_modal = $(".app_modal_01");
-
-  // viewBtn.click(function () {
-  //   dimm.show();
-  //   app_modal.show();
-
-  //   $("html, body").addClass("not_scroll");
-  //   $(".cont").css("top", -posY);
-  // });
-
-  // app_modal.click(function () {
-  //   dimm.hide();
-  //   app_modal.hide();
-
-  //   $("html, body").removeClass("not_scroll");
-  //   posY = $(window).scrollTop(posY);
-  // });
-
-  // section_03 라이트박스
-  var viewBtn = $(".cards img");
-  var app_modal = $(".app_modal_01");
-  var appImg = app_modal.find("img");
-
-  viewBtn.click(function () {
-    var appImg = $(this).find("img").attr("src");
-    dimm.show();
-    app_modal.show();
-    appImg.attr("src", appImg);
-
-    posY = $(window).scrollTop();
-    $("html, body").addClass("not_scroll");
-    $(".cont").css("top", -posY);
-  });
-
-  app_modal.click(function () {
-    dimm.hide();
-    app_modal.hide();
-    $(this).scrollTop(0);
-
-    $("html, body").removeClass("not_scroll");
-    posY = $(window).scrollTop(posY);
-  });
 });
