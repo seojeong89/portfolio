@@ -1,28 +1,5 @@
 $(function () {
-  // go_top 버튼
-  var goTop = $(".go_top");
-  $(window).scroll(function () {
-    var scrollTopValue = $(document).scrollTop();
-
-    if (scrollTopValue > 1000) {
-      goTop.fadeIn();
-    } else {
-      goTop.fadeOut();
-    }
-  });
-
-  goTop.click(function () {
-    $("html, body").animate({ scrollTop: 0 }, 400);
-  });
-
-  // go_down 버튼
-  var goDown = $(".go_down");
-
-  goDown.click(function () {
-    $("html, body").animate({ scrollTop: 900 }, 400);
-  });
-
-  // 스크롤 애니메이션
+  // 해더 텍스트 다운
   ScrollReveal().reveal(".top_ani", {
     origin: "top",
     duration: 1000,
@@ -55,6 +32,153 @@ $(function () {
     },
   });
 
+  // 앱 갤러리
+  $(".app_01").magnificPopup({
+    delegate: "a",
+    type: "image",
+    tLoading: "Loading image #%curr%...",
+    mainClass: "mfp-img-mobile",
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1],
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function (item) {
+        return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+      },
+    },
+  });
+
+  $(".app_02").magnificPopup({
+    delegate: "a",
+    type: "image",
+    tLoading: "Loading image #%curr%...",
+    mainClass: "mfp-img-mobile",
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1],
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function (item) {
+        return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+      },
+    },
+  });
+
+  $(".app_03").magnificPopup({
+    delegate: "a",
+    type: "image",
+    tLoading: "Loading image #%curr%...",
+    mainClass: "mfp-img-mobile",
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1],
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function (item) {
+        return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+      },
+    },
+  });
+
+  $(".app_04").magnificPopup({
+    delegate: "a",
+    type: "image",
+    tLoading: "Loading image #%curr%...",
+    mainClass: "mfp-img-mobile",
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1],
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function (item) {
+        return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+      },
+    },
+  });
+
+  $(".app_05").magnificPopup({
+    delegate: "a",
+    type: "image",
+    tLoading: "Loading image #%curr%...",
+    mainClass: "mfp-img-mobile",
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1],
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function (item) {
+        return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+      },
+    },
+  });
+
+  $(".app_06").magnificPopup({
+    delegate: "a",
+    type: "image",
+    tLoading: "Loading image #%curr%...",
+    mainClass: "mfp-img-mobile",
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1],
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function (item) {
+        return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+      },
+    },
+  });
+
+  $(".app_07").magnificPopup({
+    delegate: "a",
+    type: "image",
+    tLoading: "Loading image #%curr%...",
+    mainClass: "mfp-img-mobile",
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1],
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function (item) {
+        return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+      },
+    },
+  });
+
+  $(".app_08").magnificPopup({
+    type: "image",
+    closeOnBgClick: true,
+    closeOnContentClick: true,
+  });
+
+  $(".app_09").magnificPopup({
+    type: "image",
+    closeOnBgClick: true,
+    closeOnContentClick: true,
+  });
+
+  $(".app_10").magnificPopup({
+    type: "image",
+
+    closeOnBgClick: true,
+    closeOnContentClick: true,
+  });
+  // 앱 갤러리 끝
+
   // 배너 슬릭
   $(".banner_slick").slick({
     dots: true,
@@ -63,5 +187,24 @@ $(function () {
     autoplay: true,
     autoplaySpeed: 2000,
     arrows: true,
+  });
+
+  // 배너 갤러리
+  $(".banner_slick").magnificPopup({
+    delegate: "a",
+    type: "image",
+    tLoading: "Loading image #%curr%...",
+    mainClass: "mfp-img-mobile",
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1],
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function (item) {
+        return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+      },
+    },
   });
 });

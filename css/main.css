@@ -1,18 +1,4 @@
-/* ============================== go_top */
-.go_top {
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  transform: translateY(-50%);
-  z-index: 10;
-  font-size: 50px;
-  color: var(--gray);
-  cursor: pointer;
-  display: none;
-}
-
 /* ============================== nav  */
-
 .nav {
   position: fixed;
   top: 0;
@@ -69,9 +55,10 @@
 .header .snowman,
 .header .snow {
   position: absolute;
-  top: 50%;
+  top: 18%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  /* transform: translate(-50%, -50%); */
 }
 
 .header .snowman {
@@ -88,7 +75,7 @@
   text-align: center;
   line-height: 1.5;
   position: absolute;
-  bottom: 100px;
+  bottom: 160px;
   left: 50%;
   transform: translateX(-50%);
 }
