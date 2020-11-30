@@ -20,19 +20,15 @@ $(function () {
     type: "ajax",
   });
 
-  // 웹디자인 모달
+  // 섹션_02 웹디자인 모달
   $(".image-popup").magnificPopup({
     type: "image",
 
     closeOnBgClick: true,
     closeOnContentClick: true,
-    mainClass: "mfp-img-mobile",
-    image: {
-      verticalFit: true,
-    },
   });
 
-  // 앱 갤러리
+  // 섹션_03 앱 갤러리
   $(".app_01").magnificPopup({
     delegate: "a",
     type: "image",
@@ -179,7 +175,7 @@ $(function () {
   });
   // 앱 갤러리 끝
 
-  // 배너 슬릭
+  // 섹션_04 배너 슬릭
   $(".banner_slick").slick({
     dots: true,
     slidesToShow: 5,
@@ -189,7 +185,7 @@ $(function () {
     arrows: true,
   });
 
-  // 배너 갤러리
+  // 섹션_04 배너 갤러리
   $(".banner_slick").magnificPopup({
     delegate: "a",
     type: "image",

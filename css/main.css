@@ -18,8 +18,6 @@
 }
 
 .nav h4 {
-  font-size: 20px;
-  font-weight: 700;
   line-height: 60px;
   margin-right: 30px;
 }
@@ -58,7 +56,6 @@
   top: 18%;
   left: 50%;
   transform: translateX(-50%);
-  /* transform: translate(-50%, -50%); */
 }
 
 .header .snowman {
@@ -80,6 +77,13 @@
   transform: translateX(-50%);
 }
 
+@keyframes grow {
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ========수정할것 */
 .header i {
   font-size: 50px;
   color: var(--pink);
@@ -131,8 +135,6 @@
 }
 
 .white-popup h4 {
-  font-size: 20px;
-  font-weight: 700;
   margin-top: 20px;
 }
 
@@ -141,6 +143,7 @@
   color: var(--black);
   font-weight: 400;
   line-height: 2rem;
+  margin-bottom: initial;
 }
 
 .white-popup span {
@@ -203,20 +206,13 @@
 }
 /* ==================== 원 그래프 끝*/
 
+/* ==================== 팝업창 닫기버튼*/
 .mfp-close-btn-in .mfp-close {
   font-size: 50px;
   color: #ff7675;
 }
 
 /* ============================== section_01  */
-
-.section_01 h2 {
-  text-align: center;
-}
-
-.section_01 p {
-  margin-bottom: 50px;
-}
 
 .section_01 .item {
   display: flex;
@@ -229,11 +225,6 @@
   margin-bottom: 30px;
 }
 
-.section_01 p {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
 .section_01 .btn {
   margin: 0 auto;
 }
@@ -242,10 +233,6 @@
 
 .section_02 {
   background: var(--white);
-}
-
-.section_02 p {
-  margin-bottom: 50px;
 }
 
 .section_02 .items {
@@ -264,18 +251,16 @@
 .section_02 .items .item {
   width: 250px;
   height: 300px;
-  overflow: hidden;
   margin: 0 auto;
 }
 
-.section_02 h3 {
+.section_02 h4 {
   color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.3s;
-  font-size: 20px;
 }
 
 .line_box {
@@ -314,7 +299,7 @@
   opacity: 1;
 }
 
-.section_02 .items .item:hover h3,
+.section_02 .items .item:hover h4,
 .section_02 .items .item:hover .line_box {
   top: -20%;
 }
@@ -323,16 +308,15 @@
   top: 50%;
 }
 
-/* padding-bottom and top for image */
 .mfp-no-margins img.mfp-img {
   padding: 0;
 }
-/* position of shadow behind the image */
+
 .mfp-no-margins .mfp-figure:after {
   top: 0;
   bottom: 0;
 }
-/* padding for main container */
+
 .mfp-no-margins .mfp-container {
   padding: 0;
 }
@@ -342,10 +326,6 @@ img.mfp-img {
 }
 
 /* ============================== section_03  */
-.section_03 p {
-  margin-bottom: 50px;
-}
-
 .section_03 .cards {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -365,42 +345,6 @@ img.mfp-img {
 .section_03 .card:hover {
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
   transform: scale(1.2);
-}
-
-/* ============================ section_03 modal */
-
-.app_modal_01 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 2;
-  overflow-y: auto;
-  display: none;
-}
-
-.app_modal {
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
-  z-index: 10;
-  overflow-y: auto;
-}
-
-.app_modal li {
-  width: 375px;
-  border-radius: 20px;
-  overflow: hidden;
-  margin: 0 auto;
 }
 
 /* ============================== section_04  */
@@ -460,10 +404,3 @@ img.mfp-img {
   position: relative;
   top: 0;
 } */
-
-/* ============================== 애니메이션 */
-@keyframes grow {
-  100% {
-    opacity: 1;
-  }
-}
