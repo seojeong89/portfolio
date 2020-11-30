@@ -231,7 +231,7 @@
   margin-bottom: 50px;
 }
 
-.section_01 .contents {
+.section_01 .item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -239,13 +239,10 @@
 
 .section_01 img {
   width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: #ccc;
   margin-bottom: 30px;
 }
 
-.section_01 .contents p {
+.section_01 p {
   text-align: center;
   margin-bottom: 30px;
 }

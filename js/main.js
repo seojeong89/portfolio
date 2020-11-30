@@ -30,12 +30,20 @@ $(function () {
     delay: 300,
   });
 
-  // About me 모달
-  $(".popup").magnificPopup({
+  // 풀페이지
+  $("#fullpage").fullpage({
+    navigation: true,
+    menu: ".nav",
+    anchors: ["page1", "page2", "page3", "page4", "page5"],
+    responsive: 0,
+  });
+
+  // 프로필 모달
+  $(".profile").magnificPopup({
     type: "ajax",
   });
 
-  // 섹션_02 모달
+  // 웹디자인 모달
   $(".image-popup").magnificPopup({
     type: "image",
 
@@ -47,26 +55,13 @@ $(function () {
     },
   });
 
-  // // section_02 라이트박스
-  // var itemBtn = $(".section_02 li");
-  // var dimm_01 = $(".dimm_01");
-  // var dimmImg = dimm_01.find("img");
-
-  // itemBtn.click(function () {
-  //   var dataImg = $(this).find("img").attr("data-img");
-  //   dimm_01.addClass("show");
-  //   dimmImg.attr("src", dataImg);
-
-  //   posY = $(window).scrollTop();
-  //   $("html, body").addClass("not_scroll");
-  //   $(".cont").css("top", -posY);
-  // });
-
-  // dimm_01.click(function () {
-  //   $(this).removeClass("show");
-  //   $(this).scrollTop(0);
-
-  //   $("html, body").removeClass("not_scroll");
-  //   posY = $(window).scrollTop(posY);
-  // });
+  // 배너 슬릭
+  $(".banner_slick").slick({
+    dots: true,
+    slidesToShow: 5,
+    slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: true,
+  });
 });
