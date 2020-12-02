@@ -31,6 +31,7 @@
   top: 0;
   padding: 0 8px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .mfp-container:before {
@@ -73,7 +74,7 @@
 }
 
 .mfp-auto-cursor .mfp-content {
-  cursor: auto;
+  cursor: pointer;
 }
 
 .mfp-close,
