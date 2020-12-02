@@ -16,163 +16,174 @@ $(function () {
   });
 
   // 프로필 모달
-  $(".profile").magnificPopup({
-    type: "ajax",
-  });
-
-  // // 섹션_02 웹디자인 모달
-  // $(".image-popup").magnificPopup({
-  //   type: "image",
-
-  //   closeOnBgClick: true,
-  //   closeOnContentClick: true,
+  // $(".profile").magnificPopup({
+  //   type: "ajax",
   // });
 
+  // 프로필 모달 - 스크롤
+  $(".profile").magnificPopup({
+    type: "ajax",
+    // you may add other options here, e.g.:
+    // preloader: true,
+
+    callbacks: {
+      open: function () {
+        fullpage_api.setAllowScrolling(false);
+      },
+      close: function () {
+        fullpage_api.setAllowScrolling(true);
+      },
+      // e.t.c.
+    },
+  });
+
   // 섹션_03 앱 갤러리
-  $(".app_01").magnificPopup({
-    delegate: "a",
-    type: "image",
-    tLoading: "Loading image #%curr%...",
-    mainClass: "mfp-img-mobile",
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0, 1],
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-      titleSrc: function (item) {
-        return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+  {
+    $(".app_01").magnificPopup({
+      delegate: "a",
+      type: "image",
+      tLoading: "Loading image #%curr%...",
+      mainClass: "mfp-img-mobile",
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1],
       },
-    },
-  });
-
-  $(".app_02").magnificPopup({
-    delegate: "a",
-    type: "image",
-    tLoading: "Loading image #%curr%...",
-    mainClass: "mfp-img-mobile",
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0, 1],
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-      titleSrc: function (item) {
-        return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+      image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        titleSrc: function (item) {
+          return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+        },
       },
-    },
-  });
+    });
 
-  $(".app_03").magnificPopup({
-    delegate: "a",
-    type: "image",
-    tLoading: "Loading image #%curr%...",
-    mainClass: "mfp-img-mobile",
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0, 1],
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-      titleSrc: function (item) {
-        return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+    $(".app_02").magnificPopup({
+      delegate: "a",
+      type: "image",
+      tLoading: "Loading image #%curr%...",
+      mainClass: "mfp-img-mobile",
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1],
       },
-    },
-  });
-
-  $(".app_04").magnificPopup({
-    delegate: "a",
-    type: "image",
-    tLoading: "Loading image #%curr%...",
-    mainClass: "mfp-img-mobile",
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0, 1],
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-      titleSrc: function (item) {
-        return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+      image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        titleSrc: function (item) {
+          return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+        },
       },
-    },
-  });
+    });
 
-  $(".app_05").magnificPopup({
-    delegate: "a",
-    type: "image",
-    tLoading: "Loading image #%curr%...",
-    mainClass: "mfp-img-mobile",
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0, 1],
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-      titleSrc: function (item) {
-        return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+    $(".app_03").magnificPopup({
+      delegate: "a",
+      type: "image",
+      tLoading: "Loading image #%curr%...",
+      mainClass: "mfp-img-mobile",
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1],
       },
-    },
-  });
-
-  $(".app_06").magnificPopup({
-    delegate: "a",
-    type: "image",
-    tLoading: "Loading image #%curr%...",
-    mainClass: "mfp-img-mobile",
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0, 1],
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-      titleSrc: function (item) {
-        return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+      image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        titleSrc: function (item) {
+          return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+        },
       },
-    },
-  });
+    });
 
-  $(".app_07").magnificPopup({
-    delegate: "a",
-    type: "image",
-    tLoading: "Loading image #%curr%...",
-    mainClass: "mfp-img-mobile",
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0, 1],
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-      titleSrc: function (item) {
-        return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+    $(".app_04").magnificPopup({
+      delegate: "a",
+      type: "image",
+      tLoading: "Loading image #%curr%...",
+      mainClass: "mfp-img-mobile",
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1],
       },
-    },
-  });
+      image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        titleSrc: function (item) {
+          return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+        },
+      },
+    });
 
-  $(".app_08").magnificPopup({
-    type: "image",
-    closeOnBgClick: true,
-    closeOnContentClick: true,
-  });
+    $(".app_05").magnificPopup({
+      delegate: "a",
+      type: "image",
+      tLoading: "Loading image #%curr%...",
+      mainClass: "mfp-img-mobile",
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1],
+      },
+      image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        titleSrc: function (item) {
+          return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+        },
+      },
+    });
 
-  $(".app_09").magnificPopup({
-    type: "image",
-    closeOnBgClick: true,
-    closeOnContentClick: true,
-  });
+    $(".app_06").magnificPopup({
+      delegate: "a",
+      type: "image",
+      tLoading: "Loading image #%curr%...",
+      mainClass: "mfp-img-mobile",
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1],
+      },
+      image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        titleSrc: function (item) {
+          return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+        },
+      },
+    });
 
-  $(".app_10").magnificPopup({
-    type: "image",
+    $(".app_07").magnificPopup({
+      delegate: "a",
+      type: "image",
+      tLoading: "Loading image #%curr%...",
+      mainClass: "mfp-img-mobile",
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1],
+      },
+      image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        titleSrc: function (item) {
+          return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+        },
+      },
+    });
 
-    closeOnBgClick: true,
-    closeOnContentClick: true,
-  });
+    $(".app_08").magnificPopup({
+      type: "image",
+      closeOnBgClick: true,
+      closeOnContentClick: true,
+    });
+
+    $(".app_09").magnificPopup({
+      type: "image",
+      closeOnBgClick: true,
+      closeOnContentClick: true,
+    });
+
+    $(".app_10").magnificPopup({
+      type: "image",
+
+      closeOnBgClick: true,
+      closeOnContentClick: true,
+    });
+  }
   // 앱 갤러리 끝
 
   // 섹션_04 배너 슬릭

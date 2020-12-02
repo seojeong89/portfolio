@@ -1,223 +1,129 @@
-<!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+<style>
+  /* ==================== 원 그래프 */
+  .circle-chart__circle {
+    animation: circle-chart-fill 2s reverse; /* 1 */
+    transform: rotate(-90deg); /* 2, 3 */
+    transform-origin: center; /* 4 */
+  }
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  .circle-chart__circle--negative {
+    transform: rotate(-90deg) scale(1, -1); /* 1, 2, 3 */
+  }
 
-    <script src="https://unpkg.com/scrollreveal"></script>
+  .circle-chart__info {
+    animation: circle-chart-appear 2s forwards;
+    opacity: 0;
+    transform: translateY(0.3em);
+  }
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
-    />
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
+  .white-popup section {
+    text-align: center;
+  }
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
+  .white-popup section p {
+    font-size: 12px;
+  }
 
-    <link rel="stylesheet" href="./js/magnific-popup.css" />
-    <script src="./js/jquery.magnific-popup.min.js"></script>
+  .grid {
+    display: grid;
+    grid-column-gap: 1.5em;
+    /* grid-row-gap: 1em; */
+    grid-template-columns: repeat(7, 1fr);
+  }
 
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/common.css" />
-
-    <script src="./js/main.js"></script>
-  </head>
-
-
-  <style>
-    body {
-      background-color: var(--white)
+  @keyframes circle-chart-fill {
+    to {
+      stroke-dasharray: 0 100;
     }
+  }
 
-    h2 {
-      margin-top: 100px;
+  @keyframes circle-chart-appear {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
 
-    p {
-      margin: 10px 0 20px;
+  @media (min-width: 31em) {
+    .grid {
+      grid-template-columns: repeat(7, 1fr);
     }
+  }
+  /* ==================== 원 그래프 끝*/
+</style>
 
-    .cSlider--nav {
-      margin-bottom: 30px;
-    }
+<div class="grid">
+  <section>
+    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="60" height="60">
+      <circle
+        class="circle-chart__background"
+        stroke="#efefef"
+        stroke-width="2"
+        fill="none"
+        cx="16.91549431"
+        cy="16.91549431"
+        r="15.91549431"
+      />
+      <circle
+        class="circle-chart__circle"
+        stroke="#ff7675"
+        stroke-width="2"
+        stroke-dasharray="50,100"
+        stroke-linecap="round"
+        fill="none"
+        cx="16.91549431"
+        cy="16.91549431"
+        r="15.91549431"
+      />
+      <g class="circle-chart__info">
+        <text
+          class="circle-chart__percent"
+          x="16.91549431"
+          y="17.5"
+          alignment-baseline="central"
+          text-anchor="middle"
+          font-size="7"
+        >
+          50%
+        </text>
+      </g>
+    </svg>
+    <p>Photoshop</p>
 
-
-    .cSlider--nav .cSlider__item {
-      margin: 20px;
-      cursor: pointer;
-      border-radius: 6px;
-      overflow: hidden;
-    }
-
-    .cSlider--nav .cSlider__item:hover {
-      opacity: 0.7;
-    }
-
-    .cSlider--single {
-
-    }
-
-    /* 슬릭 */
-
-    .slick-prev{
-      position: fixed;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 8%;
-    }
-    .slick-next {
-      position: fixed;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 10%;
-
-    }
-
-
-    .slick-prev:before,
-    .slick-next:before {
-      color: var(--pink);
-      font-size: 50px;
-      line-height: 50px;
-    }
-
-
-
-    .slick-initialized .slick-slide {
-      outline: none;
-    }
-
-  </style>
-  </head>
-
-  <body>
-    <!-- 네브 -->
-    <div class="nav">
-      <div class="container">
-        <a data-menuanchor="page1" href="./#page1"><h4>Seojeong’s Portfolio</h4></a>
-
-        <a href="profile.html" class="profile btn">About me</a>
-        <ul class="menu">
-          <li><a data-menuanchor="page2" href="#page2">Publising</a></li>
-          <li><a data-menuanchor="page3" href="#page3">Web design</a></li>
-          <li><a data-menuanchor="page4" href="#page4">UI/UX</a></li>
-          <li><a data-menuanchor="page5" href="#page5">Banner</a></li>
-        </ul>
-      </div>
-    </div>
-
-      <div class="container slider">
-        <h2>Web design</h2>
-
-        <div class="cSlider cSlider--nav">
-          <div class="cSlider__item"><img src="./images/contents02_img01.jpg" alt=""></div>
-          <div class="cSlider__item"><img src="./images/contents02_img02.jpg" alt=""></div>
-          <div class="cSlider__item"><img src="./images/contents02_img03.jpg" alt=""></div>
-          <div class="cSlider__item"><img src="./images/contents02_img04.jpg" alt=""></div>
-          <div class="cSlider__item"><img src="./images/contents02_img05.jpg" alt=""></div>
-          <div class="cSlider__item"><img src="./images/contents02_img06.jpg" alt=""></div>
-          <div class="cSlider__item"><img src="./images/contents02_img07.jpg" alt=""></div>
-          <div class="cSlider__item"><img src="./images/contents02_img08.jpg" alt=""></div>
-        </div>
-
-        <div class="cSlider cSlider--single">
-          <div class="cSlider__item">
-            <h4>Seven Coffee</h4>
-            <p>커피를 주제로 하여
-              가상의 커피 브랜드 소개 페이지를 디자인하였습니다.</p>
-              <img src="./images/webpage-01.jpg" alt=""></div>
-          <div class="cSlider__item"><img src="./images/webpage-02.jpg" alt=""></div>
-          <div class="cSlider__item"><img src="./images/webpage-03.jpg" alt=""></div>
-          <div class="cSlider__item"><img src="./images/webpage-04.jpg" alt=""></div>
-          <div class="cSlider__item"><img src="./images/event-page-01.jpg" alt=""></div>
-          <div class="cSlider__item"><img src="./images/event-page-02.jpg" alt=""></div>
-          <div class="cSlider__item"><img src="./images/event-page-03.jpg" alt=""></div>
-          <div class="cSlider__item"><img src="./images/event-page-04.jpg" alt=""></div>
-        </div>
-      </div>
-  </body>
-
-<script>
-    document.documentElement.classList.add('js');
-
-/// ----------------------------
-
-const $rootSingle = $('.cSlider--single');
-const $rootNav = $('.cSlider--nav');
-
- $rootSingle.slick({
-	slide: '.cSlider__item',
- 	slidesToShow: 1,
- 	slidesToScroll: 1,
- 	arrows: true,
- 	fade: false,
- 	adaptiveHeight: true,
- 	infinite: false,
-	useTransform: true,
- 	speed: 400,
- 	cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
- });
-
- $rootNav.on('init', function(event, slick) {
- 		$(this).find('.slick-slide.slick-current').addClass('is-active');
- 	})
- 	.slick({
-	 	slide: '.cSlider__item',
- 		slidesToShow: 8,
-     slidesToScroll: 1,
- 		dots: false,
- 		focusOnSelect: false,
- 		infinite: false,
- 		responsive: [{
- 			breakpoint: 1024,
- 			settings: {
- 				slidesToShow: 5,
- 				slidesToScroll: 5,
- 			}
- 		}, {
- 			breakpoint: 640,
- 			settings: {
- 				slidesToShow: 4,
- 				slidesToScroll: 4,
-			}
- 		}, {
- 			breakpoint: 420,
- 			settings: {
- 				slidesToShow: 3,
- 				slidesToScroll: 3,
-		}
- 		}]
- 	});
-
- $rootSingle.on('afterChange', function(event, slick, currentSlide) {
- 	$rootNav.slick('slickGoTo', currentSlide);
- 	$rootNav.find('.slick-slide.is-active').removeClass('is-active');
- 	$rootNav.find('.slick-slide[data-slick-index="' + currentSlide + '"]').addClass('is-active');
- });
-
- $rootNav.on('click', '.slick-slide', function(event) {
- 	event.preventDefault();
- 	var goToSingleSlide = $(this).data('slick-index');
-
- 	 $rootSingle.slick('slickGoTo', goToSingleSlide);
- });
-  </script>
-
-</html>
+    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="60" height="60">
+      <circle
+        class="circle-chart__background"
+        stroke="#efefef"
+        stroke-width="2"
+        fill="none"
+        cx="16.91549431"
+        cy="16.91549431"
+        r="15.91549431"
+      />
+      <circle
+        class="circle-chart__circle"
+        stroke="#ff7675"
+        stroke-width="2"
+        stroke-dasharray="50,100"
+        stroke-linecap="round"
+        fill="none"
+        cx="16.91549431"
+        cy="16.91549431"
+        r="15.91549431"
+      />
+      <g class="circle-chart__info">
+        <text
+          class="circle-chart__percent"
+          x="16.91549431"
+          y="17.5"
+          alignment-baseline="central"
+          text-anchor="middle"
+          font-size="7"
+        >
+          50%
+        </text>
+      </g>
+    </svg>
+    <p>Photoshop</p>
+  </section>
+</div>

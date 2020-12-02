@@ -67,4 +67,9 @@ $(function () {
 
     $rootSingle.slick("slickGoTo", goToSingleSlide);
   });
+
+  // 프로필 모달
+  $(".profile").magnificPopup({
+    type: "ajax",
+  });
 });
