@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,39 +34,190 @@
     <link rel="stylesheet" href="./js/magnific-popup.css" />
     <script src="./js/jquery.magnific-popup.min.js"></script>
 
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
 
+    <script src="./js/main.js"></script>
   </head>
+
+
+  <style>
+    body {
+      background-color: var(--white)
+    }
+
+    h2 {
+      margin-top: 100px;
+    }
+
+    p {
+      margin: 10px 0 20px;
+    }
+
+    .cSlider--nav {
+      margin-bottom: 30px;
+    }
+
+
+    .cSlider--nav .cSlider__item {
+      margin: 20px;
+      cursor: pointer;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .cSlider--nav .cSlider__item:hover {
+      opacity: 0.7;
+    }
+
+    .cSlider--single {
+
+    }
+
+    /* 슬릭 */
+
+    .slick-prev{
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 8%;
+    }
+    .slick-next {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10%;
+
+    }
+
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: var(--pink);
+      font-size: 50px;
+      line-height: 50px;
+    }
+
+
+
+    .slick-initialized .slick-slide {
+      outline: none;
+    }
+
+  </style>
+  </head>
+
   <body>
-    <ul class="popup-gallery">
-      <a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg" title="The Cleaner"><img src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_s.jpg" width="75" height="75"></a>
-      <a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg" title="Winter Dance"></a>
-      <a href="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg" title="The Uninvited Guest"></a>
-      <a href="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_b.jpg" title="Oh no, not again!"></a>
-      <a href="http://farm9.staticflickr.com/8235/8559402846_8b7f82e05d_b.jpg" title="Swan Lake"></a>
-      <a href="http://farm9.staticflickr.com/8235/8558295467_e89e95e05a_b.jpg" title="The Shake"></a>
-      <a href="http://farm9.staticflickr.com/8378/8559402848_9fcd90d20b_b.jpg" title="Who's that, mommy?"></a>
-    </ul>
+    <!-- 네브 -->
+    <div class="nav">
+      <div class="container">
+        <a data-menuanchor="page1" href="./#page1"><h4>Seojeong’s Portfolio</h4></a>
+
+        <a href="profile.html" class="profile btn">About me</a>
+        <ul class="menu">
+          <li><a data-menuanchor="page2" href="#page2">Publising</a></li>
+          <li><a data-menuanchor="page3" href="#page3">Web design</a></li>
+          <li><a data-menuanchor="page4" href="#page4">UI/UX</a></li>
+          <li><a data-menuanchor="page5" href="#page5">Banner</a></li>
+        </ul>
+      </div>
     </div>
-    <script>
-     $(document).ready(function() {
-	$('.popup-gallery').magnificPopup({
-		delegate: 'a',
-		type: 'image',
-		tLoading: 'Loading image #%curr%...',
-		mainClass: 'mfp-img-mobile',
-		gallery: {
-			enabled: true,
-			navigateByImgClick: true,
-			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-		},
-		image: {
-			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-			titleSrc: function(item) {
-				return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
-			}
-		}
-	});
-});
-    </script>
+
+      <div class="container slider">
+        <h2>Web design</h2>
+
+        <div class="cSlider cSlider--nav">
+          <div class="cSlider__item"><img src="./images/contents02_img01.jpg" alt=""></div>
+          <div class="cSlider__item"><img src="./images/contents02_img02.jpg" alt=""></div>
+          <div class="cSlider__item"><img src="./images/contents02_img03.jpg" alt=""></div>
+          <div class="cSlider__item"><img src="./images/contents02_img04.jpg" alt=""></div>
+          <div class="cSlider__item"><img src="./images/contents02_img05.jpg" alt=""></div>
+          <div class="cSlider__item"><img src="./images/contents02_img06.jpg" alt=""></div>
+          <div class="cSlider__item"><img src="./images/contents02_img07.jpg" alt=""></div>
+          <div class="cSlider__item"><img src="./images/contents02_img08.jpg" alt=""></div>
+        </div>
+
+        <div class="cSlider cSlider--single">
+          <div class="cSlider__item">
+            <h4>Seven Coffee</h4>
+            <p>커피를 주제로 하여
+              가상의 커피 브랜드 소개 페이지를 디자인하였습니다.</p>
+              <img src="./images/webpage-01.jpg" alt=""></div>
+          <div class="cSlider__item"><img src="./images/webpage-02.jpg" alt=""></div>
+          <div class="cSlider__item"><img src="./images/webpage-03.jpg" alt=""></div>
+          <div class="cSlider__item"><img src="./images/webpage-04.jpg" alt=""></div>
+          <div class="cSlider__item"><img src="./images/event-page-01.jpg" alt=""></div>
+          <div class="cSlider__item"><img src="./images/event-page-02.jpg" alt=""></div>
+          <div class="cSlider__item"><img src="./images/event-page-03.jpg" alt=""></div>
+          <div class="cSlider__item"><img src="./images/event-page-04.jpg" alt=""></div>
+        </div>
+      </div>
   </body>
+
+<script>
+    document.documentElement.classList.add('js');
+
+/// ----------------------------
+
+const $rootSingle = $('.cSlider--single');
+const $rootNav = $('.cSlider--nav');
+
+ $rootSingle.slick({
+	slide: '.cSlider__item',
+ 	slidesToShow: 1,
+ 	slidesToScroll: 1,
+ 	arrows: true,
+ 	fade: false,
+ 	adaptiveHeight: true,
+ 	infinite: false,
+	useTransform: true,
+ 	speed: 400,
+ 	cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
+ });
+
+ $rootNav.on('init', function(event, slick) {
+ 		$(this).find('.slick-slide.slick-current').addClass('is-active');
+ 	})
+ 	.slick({
+	 	slide: '.cSlider__item',
+ 		slidesToShow: 8,
+     slidesToScroll: 1,
+ 		dots: false,
+ 		focusOnSelect: false,
+ 		infinite: false,
+ 		responsive: [{
+ 			breakpoint: 1024,
+ 			settings: {
+ 				slidesToShow: 5,
+ 				slidesToScroll: 5,
+ 			}
+ 		}, {
+ 			breakpoint: 640,
+ 			settings: {
+ 				slidesToShow: 4,
+ 				slidesToScroll: 4,
+			}
+ 		}, {
+ 			breakpoint: 420,
+ 			settings: {
+ 				slidesToShow: 3,
+ 				slidesToScroll: 3,
+		}
+ 		}]
+ 	});
+
+ $rootSingle.on('afterChange', function(event, slick, currentSlide) {
+ 	$rootNav.slick('slickGoTo', currentSlide);
+ 	$rootNav.find('.slick-slide.is-active').removeClass('is-active');
+ 	$rootNav.find('.slick-slide[data-slick-index="' + currentSlide + '"]').addClass('is-active');
+ });
+
+ $rootNav.on('click', '.slick-slide', function(event) {
+ 	event.preventDefault();
+ 	var goToSingleSlide = $(this).data('slick-index');
+
+ 	 $rootSingle.slick('slickGoTo', goToSingleSlide);
+ });
+  </script>
+
 </html>

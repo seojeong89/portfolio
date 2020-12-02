@@ -7,7 +7,7 @@ $(function () {
     delay: 300,
   });
 
-  // 풀페이지
+  // 풀페이지;
   $("#fullpage").fullpage({
     navigation: true,
     menu: ".nav",
@@ -20,13 +20,13 @@ $(function () {
     type: "ajax",
   });
 
-  // 섹션_02 웹디자인 모달
-  $(".image-popup").magnificPopup({
-    type: "image",
+  // // 섹션_02 웹디자인 모달
+  // $(".image-popup").magnificPopup({
+  //   type: "image",
 
-    closeOnBgClick: true,
-    closeOnContentClick: true,
-  });
+  //   closeOnBgClick: true,
+  //   closeOnContentClick: true,
+  // });
 
   // 섹션_03 앱 갤러리
   $(".app_01").magnificPopup({
