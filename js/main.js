@@ -23,8 +23,6 @@ $(function () {
   // 프로필 모달 - 스크롤
   $(".profile").magnificPopup({
     type: "ajax",
-    // you may add other options here, e.g.:
-    // preloader: true,
 
     callbacks: {
       open: function () {
@@ -33,7 +31,6 @@ $(function () {
       close: function () {
         fullpage_api.setAllowScrolling(true);
       },
-      // e.t.c.
     },
   });
 
@@ -55,6 +52,15 @@ $(function () {
           return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
         },
       },
+
+      callbacks: {
+        open: function () {
+          fullpage_api.setAllowScrolling(false);
+        },
+        close: function () {
+          fullpage_api.setAllowScrolling(true);
+        },
+      },
     });
 
     $(".app_02").magnificPopup({
@@ -71,6 +77,15 @@ $(function () {
         tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
         titleSrc: function (item) {
           return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+        },
+      },
+
+      callbacks: {
+        open: function () {
+          fullpage_api.setAllowScrolling(false);
+        },
+        close: function () {
+          fullpage_api.setAllowScrolling(true);
         },
       },
     });
@@ -91,6 +106,15 @@ $(function () {
           return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
         },
       },
+
+      callbacks: {
+        open: function () {
+          fullpage_api.setAllowScrolling(false);
+        },
+        close: function () {
+          fullpage_api.setAllowScrolling(true);
+        },
+      },
     });
 
     $(".app_04").magnificPopup({
@@ -107,6 +131,15 @@ $(function () {
         tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
         titleSrc: function (item) {
           return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+        },
+      },
+
+      callbacks: {
+        open: function () {
+          fullpage_api.setAllowScrolling(false);
+        },
+        close: function () {
+          fullpage_api.setAllowScrolling(true);
         },
       },
     });
@@ -127,6 +160,15 @@ $(function () {
           return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
         },
       },
+
+      callbacks: {
+        open: function () {
+          fullpage_api.setAllowScrolling(false);
+        },
+        close: function () {
+          fullpage_api.setAllowScrolling(true);
+        },
+      },
     });
 
     $(".app_06").magnificPopup({
@@ -143,6 +185,15 @@ $(function () {
         tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
         titleSrc: function (item) {
           return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+        },
+      },
+
+      callbacks: {
+        open: function () {
+          fullpage_api.setAllowScrolling(false);
+        },
+        close: function () {
+          fullpage_api.setAllowScrolling(true);
         },
       },
     });
@@ -163,18 +214,45 @@ $(function () {
           return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
         },
       },
+
+      callbacks: {
+        open: function () {
+          fullpage_api.setAllowScrolling(false);
+        },
+        close: function () {
+          fullpage_api.setAllowScrolling(true);
+        },
+      },
     });
 
     $(".app_08").magnificPopup({
       type: "image",
       closeOnBgClick: true,
       closeOnContentClick: true,
+
+      callbacks: {
+        open: function () {
+          fullpage_api.setAllowScrolling(false);
+        },
+        close: function () {
+          fullpage_api.setAllowScrolling(true);
+        },
+      },
     });
 
     $(".app_09").magnificPopup({
       type: "image",
       closeOnBgClick: true,
       closeOnContentClick: true,
+
+      callbacks: {
+        open: function () {
+          fullpage_api.setAllowScrolling(false);
+        },
+        close: function () {
+          fullpage_api.setAllowScrolling(true);
+        },
+      },
     });
 
     $(".app_10").magnificPopup({
@@ -182,6 +260,15 @@ $(function () {
 
       closeOnBgClick: true,
       closeOnContentClick: true,
+
+      callbacks: {
+        open: function () {
+          fullpage_api.setAllowScrolling(false);
+        },
+        close: function () {
+          fullpage_api.setAllowScrolling(true);
+        },
+      },
     });
   }
   // 앱 갤러리 끝
@@ -211,6 +298,15 @@ $(function () {
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
       titleSrc: function (item) {
         return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
+      },
+    },
+
+    callbacks: {
+      open: function () {
+        fullpage_api.setAllowScrolling(false);
+      },
+      close: function () {
+        fullpage_api.setAllowScrolling(true);
       },
     },
   });

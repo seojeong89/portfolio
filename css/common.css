@@ -127,7 +127,7 @@ p {
   align-items: center;
   margin: 0 auto;
   box-sizing: border-box;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .pop_up_box {

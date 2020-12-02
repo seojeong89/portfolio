@@ -1,129 +1,63 @@
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
 <style>
-  /* ==================== 원 그래프 */
-  .circle-chart__circle {
-    animation: circle-chart-fill 2s reverse; /* 1 */
-    transform: rotate(-90deg); /* 2, 3 */
-    transform-origin: center; /* 4 */
-  }
-
-  .circle-chart__circle--negative {
-    transform: rotate(-90deg) scale(1, -1); /* 1, 2, 3 */
-  }
-
-  .circle-chart__info {
-    animation: circle-chart-appear 2s forwards;
-    opacity: 0;
-    transform: translateY(0.3em);
-  }
-
-  .white-popup section {
+  .chart {
+    float: left;
+    width: 33.33%;
+    height: 230px;
     text-align: center;
   }
-
-  .white-popup section p {
-    font-size: 12px;
+  .chart span.title {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+    top: 110px;
   }
-
-  .grid {
-    display: grid;
-    grid-column-gap: 1.5em;
-    /* grid-row-gap: 1em; */
-    grid-template-columns: repeat(7, 1fr);
-  }
-
-  @keyframes circle-chart-fill {
-    to {
-      stroke-dasharray: 0 100;
-    }
-  }
-
-  @keyframes circle-chart-appear {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @media (min-width: 31em) {
-    .grid {
-      grid-template-columns: repeat(7, 1fr);
-    }
-  }
-  /* ==================== 원 그래프 끝*/
 </style>
+<body>
+  <div class="chart chart1" data-percent="55"><span class="title">chart1</span></div>
+  <div class="chart chart2" data-percent="55"><span class="title">chart2</span></div>
 
-<div class="grid">
-  <section>
-    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="60" height="60">
-      <circle
-        class="circle-chart__background"
-        stroke="#efefef"
-        stroke-width="2"
-        fill="none"
-        cx="16.91549431"
-        cy="16.91549431"
-        r="15.91549431"
-      />
-      <circle
-        class="circle-chart__circle"
-        stroke="#ff7675"
-        stroke-width="2"
-        stroke-dasharray="50,100"
-        stroke-linecap="round"
-        fill="none"
-        cx="16.91549431"
-        cy="16.91549431"
-        r="15.91549431"
-      />
-      <g class="circle-chart__info">
-        <text
-          class="circle-chart__percent"
-          x="16.91549431"
-          y="17.5"
-          alignment-baseline="central"
-          text-anchor="middle"
-          font-size="7"
-        >
-          50%
-        </text>
-      </g>
-    </svg>
-    <p>Photoshop</p>
+  <div class="chart chart3" data-percent="55"><span class="title">chart3</span></div>
 
-    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="60" height="60">
-      <circle
-        class="circle-chart__background"
-        stroke="#efefef"
-        stroke-width="2"
-        fill="none"
-        cx="16.91549431"
-        cy="16.91549431"
-        r="15.91549431"
-      />
-      <circle
-        class="circle-chart__circle"
-        stroke="#ff7675"
-        stroke-width="2"
-        stroke-dasharray="50,100"
-        stroke-linecap="round"
-        fill="none"
-        cx="16.91549431"
-        cy="16.91549431"
-        r="15.91549431"
-      />
-      <g class="circle-chart__info">
-        <text
-          class="circle-chart__percent"
-          x="16.91549431"
-          y="17.5"
-          alignment-baseline="central"
-          text-anchor="middle"
-          font-size="7"
-        >
-          50%
-        </text>
-      </g>
-    </svg>
-    <p>Photoshop</p>
-  </section>
-</div>
+  <script>
+    $(".chart1").easyPieChart({
+      barColor: "#f16529",
+      trackColor: "#ccc",
+      scaleColor: "#fff",
+      lineCap: "butt",
+      lineWidth: 30,
+      size: 200,
+      animate: 1000,
+      onStart: $.noop,
+      onStop: $.noop,
+    });
+
+    $(".chart2").easyPieChart({
+      barColor: "#1c88c7",
+      trackColor: "#fff",
+      scaleColor: "#ccc",
+      lineCap: "round",
+      lineWidth: 30,
+      size: 200,
+      animate: 1000,
+      onStart: $.noop,
+      onStop: $.noop,
+    });
+
+    $(".chart3").easyPieChart({
+      barColor: "#1c88c7",
+      trackColor: "#fff",
+      scaleColor: "#fff",
+      lineCap: "square",
+      lineWidth: 30,
+      size: 200,
+      animate: 1000,
+      onStart: $.noop,
+      onStop: $.noop,
+    });
+
+    Resources;
+  </script>
+</body>
