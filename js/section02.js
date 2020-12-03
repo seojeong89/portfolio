@@ -25,7 +25,7 @@ $(function () {
     })
     .slick({
       slide: ".cSlider__item",
-      slidesToShow: 8,
+      slidesToShow: 10,
       slidesToScroll: 1,
       dots: false,
       focusOnSelect: false,

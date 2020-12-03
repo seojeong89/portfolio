@@ -15,6 +15,7 @@ p {
 }
 
 .cSlider--nav .cSlider__item {
+  height: 100px;
   margin: 20px;
   cursor: pointer;
   border-radius: 6px;
@@ -26,6 +27,12 @@ p {
 .cSlider--nav .cSlider__item:hover {
   opacity: 0.7;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+}
+
+.cSlider--single #span {
+  width: 1200px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
 
 /* 슬릭 */

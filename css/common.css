@@ -2,7 +2,7 @@
 
 :root {
   --black: #111111;
-  --gray: #636e72;
+  --gray: #848484;
   --pink: #ff7675;
   --white: #f6f6f6;
 }
@@ -93,6 +93,12 @@ p {
   background: var(--pink);
   color: #fff;
   margin-right: auto;
+}
+
+.nav .btn:hover {
+  transition: all 0.3s;
+  background: var(--white);
+  color: var(--pink);
 }
 
 .nav .menu {
