@@ -12,7 +12,7 @@ $(function () {
     navigation: true,
     menu: ".nav",
     anchors: ["page1", "page2", "page3", "page4", "page5"],
-    responsive: 0,
+    responsive: 900,
   });
 
   // 프로필 모달
@@ -170,106 +170,6 @@ $(function () {
         },
       },
     });
-
-    $(".app_06").magnificPopup({
-      delegate: "a",
-      type: "image",
-      tLoading: "Loading image #%curr%...",
-      mainClass: "mfp-img-mobile",
-      gallery: {
-        enabled: true,
-        navigateByImgClick: true,
-        preload: [0, 1],
-      },
-      image: {
-        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-        titleSrc: function (item) {
-          return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
-        },
-      },
-
-      callbacks: {
-        open: function () {
-          fullpage_api.setAllowScrolling(false);
-        },
-        close: function () {
-          fullpage_api.setAllowScrolling(true);
-        },
-      },
-    });
-
-    $(".app_07").magnificPopup({
-      delegate: "a",
-      type: "image",
-      tLoading: "Loading image #%curr%...",
-      mainClass: "mfp-img-mobile",
-      gallery: {
-        enabled: true,
-        navigateByImgClick: true,
-        preload: [0, 1],
-      },
-      image: {
-        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-        titleSrc: function (item) {
-          return item.el.attr("title") + "<small>by Marsel Van Oosten</small>";
-        },
-      },
-
-      callbacks: {
-        open: function () {
-          fullpage_api.setAllowScrolling(false);
-        },
-        close: function () {
-          fullpage_api.setAllowScrolling(true);
-        },
-      },
-    });
-
-    $(".app_08").magnificPopup({
-      type: "image",
-      closeOnBgClick: true,
-      closeOnContentClick: true,
-
-      callbacks: {
-        open: function () {
-          fullpage_api.setAllowScrolling(false);
-        },
-        close: function () {
-          fullpage_api.setAllowScrolling(true);
-        },
-      },
-    });
-
-    $(".app_09").magnificPopup({
-      type: "image",
-      closeOnBgClick: true,
-      closeOnContentClick: true,
-
-      callbacks: {
-        open: function () {
-          fullpage_api.setAllowScrolling(false);
-        },
-        close: function () {
-          fullpage_api.setAllowScrolling(true);
-        },
-      },
-    });
-
-    $(".app_10").magnificPopup({
-      type: "image",
-
-      closeOnBgClick: true,
-      closeOnContentClick: true,
-
-      callbacks: {
-        open: function () {
-          fullpage_api.setAllowScrolling(false);
-        },
-        close: function () {
-          fullpage_api.setAllowScrolling(true);
-        },
-      },
-    });
   }
   // 앱 갤러리 끝
 
@@ -309,5 +209,21 @@ $(function () {
         fullpage_api.setAllowScrolling(true);
       },
     },
+  });
+
+  // ====================
+  // 메뉴
+  var bars = $(".bars");
+  var menu = $(".menu");
+
+  bars.on("click", function () {
+    menu.toggleClass("active");
+    $(this).css("position", "fixed");
+
+    if ($(this).find("i").hasClass("xi-bars")) {
+      $(this).find("i").attr("class", "xi-close");
+    } else {
+      $(this).find("i").attr("class", "xi-bars");
+    }
   });
 });

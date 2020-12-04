@@ -104,29 +104,18 @@ p {
   display: flex;
 }
 
-.menu a {
+.nav .menu a {
   display: block;
+  height: 60px;
   line-height: 60px;
   margin-left: 50px;
   font-size: 14px;
   font-weight: 700;
 }
 
-.menu a:hover {
+.nav .menu a:hover {
   color: var(--pink);
   transition: color 0.3s;
-}
-
-.bars {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  display: none;
-}
-
-.bars i {
-  font-size: 30px;
-  color: var(--black);
 }
 
 /* ============================== 프로필 모달  */
@@ -134,7 +123,7 @@ p {
   position: relative;
   background: #fff;
   padding: 50px 0;
-  width: 90%;
+  width: auto;
   max-width: 820px;
   border-radius: 12px;
   border: 2px solid var(--pink);
@@ -248,34 +237,4 @@ p {
   left: 50px;
   padding-right: 0;
   font-size: 70px;
-}
-
-/* ========================== 반응형 */
-@media (max-width: 900px) {
-  /* nav - menu */
-  .menu {
-    position: fixed;
-    width: 20%;
-    height: 100vh;
-    background: var(--white);
-    top: 0;
-    right: -100%;
-    flex-direction: column;
-    align-items: baseline;
-    justify-content: center;
-    transition: right 0.3s;
-  }
-
-  .menu.active {
-    right: 0;
-  }
-
-  .menu li a {
-    margin: initial;
-    padding: 10px 20px;
-  }
-
-  .bars {
-    display: initial;
-  }
 }
