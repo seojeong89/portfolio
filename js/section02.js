@@ -72,4 +72,12 @@ $(function () {
   $(".profile").magnificPopup({
     type: "ajax",
   });
+
+  // 메뉴
+  var bars = $(".bars");
+  var menu = $(".menu");
+
+  bars.on("click", function () {
+    menu.toggleClass("active");
+  });
 });

@@ -218,12 +218,11 @@ $(function () {
 
   bars.on("click", function () {
     menu.toggleClass("active");
-    $(this).css("position", "fixed");
 
-    if ($(this).find("i").hasClass("xi-bars")) {
-      $(this).find("i").attr("class", "xi-close");
-    } else {
-      $(this).find("i").attr("class", "xi-bars");
-    }
+    // if ($(this).find("i").hasClass("xi-bars")) {
+    //   $(this).find("i").attr("class", "xi-close");
+    // } else {
+    //   $(this).find("i").attr("class", "xi-bars");
+    // }
   });
 });

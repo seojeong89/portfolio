@@ -121,6 +121,7 @@ p {
   position: absolute;
   top: 15px;
   right: 15px;
+  cursor: pointer;
   display: none;
 }
 
@@ -164,11 +165,10 @@ p {
 }
 
 .photo {
-  width: 220px;
-  height: 160px;
-  border-radius: 14px;
-  margin-top: 5px;
-  margin-bottom: 20px;
+  width: 200px;
+  /* height: 200px; */
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 .white-popup p {
@@ -253,21 +253,22 @@ p {
 /* ========================== 반응형 */
 @media (max-width: 900px) {
   /* nav - menu */
-  .menu {
+
+  .nav .menu {
     position: fixed;
-    width: 20%;
+    top: 0;
+    right: -200px;
+    width: 200px;
     height: 100vh;
     background: var(--white);
-    top: 0;
-    right: -100%;
     flex-direction: column;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
     transition: right 0.3s;
   }
 
   .menu.active {
-    right: 0;
+    right: 0px;
   }
 
   .menu li a {
@@ -277,5 +278,16 @@ p {
 
   .bars {
     display: initial;
+  }
+
+  /* 프로필모달 */
+  .info_03 {
+    /* width: 500px; */
+  }
+}
+
+@media (max-width: 400px) {
+  .menu {
+    width: 100%;
   }
 }
