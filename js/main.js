@@ -1,10 +1,19 @@
 $(function () {
   // 해더 텍스트 다운
-  ScrollReveal().reveal(".top_ani", {
-    origin: "top",
-    duration: 1000,
-    distance: "200px",
-    delay: 300,
+  // ScrollReveal().reveal(".top_ani", {
+  //   origin: "top",
+  //   duration: 1000,
+  //   distance: "200px",
+  //   delay: 300,
+  // });
+
+  // 해더 텍스트
+  var typed = new Typed("#heade_typed", {
+    stringsElement: "#header",
+    typeSpeed: 100,
+    startDelay: 1000,
+    backSpeed: 30,
+    showCursor: false,
   });
 
   // 풀페이지;

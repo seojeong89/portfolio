@@ -1,63 +1,37 @@
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <style>
+      body {
+        position: relative;
+      }
 
-<style>
-  .chart {
-    float: left;
-    width: 33.33%;
-    height: 230px;
-    text-align: center;
-  }
-  .chart span.title {
-    position: relative;
-    display: block;
-    width: 100%;
-    text-align: center;
-    top: 110px;
-  }
-</style>
-<body>
-  <div class="chart chart1" data-percent="55"><span class="title">chart1</span></div>
-  <div class="chart chart2" data-percent="55"><span class="title">chart2</span></div>
+      #typed {
+        /* background: yellow; */
+        position: absolute;
+        top: 10%;
+        left: 30%;
+      }
 
-  <div class="chart chart3" data-percent="55"><span class="title">chart3</span></div>
+      .typed-strings {
+      }
+    </style>
+  </head>
+  <body>
+    <div id="typed-strings">
+      <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+      <p>It <em>types</em> out sentences.</p>
+    </div>
+    <span id="typed"></span>
 
-  <script>
-    $(".chart1").easyPieChart({
-      barColor: "#f16529",
-      trackColor: "#ccc",
-      scaleColor: "#fff",
-      lineCap: "butt",
-      lineWidth: 30,
-      size: 200,
-      animate: 1000,
-      onStart: $.noop,
-      onStop: $.noop,
-    });
-
-    $(".chart2").easyPieChart({
-      barColor: "#1c88c7",
-      trackColor: "#fff",
-      scaleColor: "#ccc",
-      lineCap: "round",
-      lineWidth: 30,
-      size: 200,
-      animate: 1000,
-      onStart: $.noop,
-      onStop: $.noop,
-    });
-
-    $(".chart3").easyPieChart({
-      barColor: "#1c88c7",
-      trackColor: "#fff",
-      scaleColor: "#fff",
-      lineCap: "square",
-      lineWidth: 30,
-      size: 200,
-      animate: 1000,
-      onStart: $.noop,
-      onStop: $.noop,
-    });
-
-    Resources;
-  </script>
-</body>
+    <script>
+      var typed = new Typed("#typed", {
+        stringsElement: "#typed-strings",
+      });
+    </script>
+  </body>
+</html>

@@ -18,7 +18,7 @@ h2 {
   height: 100px;
   margin: 20px;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
   transition: all 0.3s;
