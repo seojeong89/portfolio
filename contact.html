@@ -1,0 +1,284 @@
+<style>
+  body{
+    /* background: rgba(0, 0, 0, 0.6); */
+
+  }
+
+  .contact {
+    width: 500px;
+    height: 600px;
+    margin: 0 auto;
+    color:#fff;
+  }
+
+.gform {
+}
+
+.gform label {
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.gform input,
+.gform textarea {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 30px;
+  border: 1px solid transparent;
+  background: #f6f6f6;
+  border-radius: 4px;
+  outline: none;
+  color: #1a1a1a;
+}
+
+.gform input::placeholder,
+.gform textarea::placeholder {
+  color: #7d7d7d;
+}
+
+.gform input:focus,
+.gform textarea:focus {
+  background: #fff;
+  /* border: 1px solid #eee; */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+}
+
+.gform textarea {
+  resize: vertical;
+}
+
+.btn {
+  width: 120px;
+  height: 30px;
+  border-radius: 33px;
+  font-size: 14px;
+  /* line-height: 30px; */
+  text-align: center;
+  border: 1px solid #ff7675;
+  background: #ff7675;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+}
+
+
+.close {
+  background: #8b496b;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* dimm, modal */
+.dimm {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.dimm i {
+  font-size: 60px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dimm.active {
+  display: block;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 300px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.modal span {
+  display: block;
+  font-size: 60px;
+}
+
+.modal p {
+  padding: 20px;
+}
+</style>
+<div class="contact">
+  <h3>메일보내기</h3>
+  <form
+    class="gform"
+    method="POST"
+    data-email="halim1378@gmail.com"
+    action="https://script.google.com/macros/s/AKfycbw1jr1wDZQRoyMgRmWlUlL3ZSInJDbqiw3mKTgR9w/exec"
+  >
+    <label for="name">이름</label>
+    <input type="text" id="name" name="name" placeholder="이름" />
+    <label for="email">이메일</label>
+    <input type="email" id=" email" name="email" placeholder="이메일" />
+    <label for="message">내용</label>
+    <textarea name="message" id="message" cols="30" rows="10" placeholder="내용"></textarea>
+
+    <button type="submit" class="btn">보내기</button>
+  </form>
+</div>
+
+<!-- dim -->
+<div class="dimm">
+  <i class="xi-spinner-5 xi-spin"></i>
+</div>
+
+<!-- modal -->
+<div class="modal">
+  <span>😆</span>
+  <p>메일이 성공적으로<br />발송되었습니다.</p>
+  <button class="btn close">닫기</button>
+</div>
+</div>
+
+<script>
+const dimm = document.querySelector(".dimm");
+const modal = document.querySelector(".modal");
+const close = document.querySelector(".close");
+
+function sendmail() {
+  // get all data in form and return object
+  function getFormData(form) {
+    var elements = form.elements;
+    var honeypot;
+
+    var fields = Object.keys(elements)
+      .filter(function (k) {
+        if (elements[k].name === "honeypot") {
+          honeypot = elements[k].value;
+          return false;
+        }
+        return true;
+      })
+      .map(function (k) {
+        if (elements[k].name !== undefined) {
+          return elements[k].name;
+          // special case for Edge's html collection
+        } else if (elements[k].length > 0) {
+          return elements[k].item(0).name;
+        }
+      })
+      .filter(function (item, pos, self) {
+        return self.indexOf(item) == pos && item;
+      });
+
+    var formData = {};
+    fields.forEach(function (name) {
+      var element = elements[name];
+
+      // singular form elements just have one value
+      formData[name] = element.value;
+
+      // when our element has multiple items, get their values
+      if (element.length) {
+        var data = [];
+        for (var i = 0; i < element.length; i++) {
+          var item = element.item(i);
+          if (item.checked || item.selected) {
+            data.push(item.value);
+          }
+        }
+        formData[name] = data.join(", ");
+      }
+    });
+
+    // add form-specific values into the data
+    formData.formDataNameOrder = JSON.stringify(fields);
+    formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
+    formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+
+    return { data: formData, honeypot: honeypot };
+  }
+
+  function handleFormSubmit(event) {
+    // handles form submit without any jquery
+    event.preventDefault(); // we are submitting via xhr below
+    var form = event.target;
+    var formData = getFormData(form);
+    var data = formData.data;
+
+    if (data.name === "" || data.message === "") {
+      alert("이름과 이메일, 내용을 확인하세요!");
+      return;
+    } else {
+      dimm.classList.add("active");
+    }
+
+    // If a honeypot field is filled, assume it was done so by a spam bot.
+    if (formData.honeypot) {
+      return false;
+    }
+
+    disableAllButtons(form);
+    var url = form.action;
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url);
+    // xhr.withCredentials = true;
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        form.reset();
+
+        // 성공후 동작
+        modal.classList.add("active");
+
+        close.addEventListener("click", () => {
+          dimm.classList.remove("active");
+          modal.classList.remove("active");
+          location.reload();
+        });
+      }
+    };
+    // url encode form data for sending as post data
+    var encoded = Object.keys(data)
+      .map(function (k) {
+        return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+      })
+      .join("&");
+    xhr.send(encoded);
+  }
+
+  function loaded() {
+    // bind to the submit event of our form
+    var forms = document.querySelectorAll("form.gform");
+    for (var i = 0; i < forms.length; i++) {
+      forms[i].addEventListener("submit", handleFormSubmit, false);
+    }
+  }
+  document.addEventListener("DOMContentLoaded", loaded, false);
+
+  function disableAllButtons(form) {
+    var buttons = form.querySelectorAll("button");
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].disabled = true;
+    }
+  }
+}
+
+sendmail();
+
+</script>
