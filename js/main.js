@@ -211,6 +211,7 @@ $(function () {
           slidesToScroll: 1,
         },
       },
+      {},
     ],
   });
 

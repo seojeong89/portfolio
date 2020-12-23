@@ -432,4 +432,15 @@
 }
 
 @media (max-width: 320px) {
+  .section_04 .banner_slick img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .section_04 .slick-slider {
+    width: 180px;
+  }
+  .slick-dots {
+    display: none;
+  }
 }
