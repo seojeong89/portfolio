@@ -299,11 +299,137 @@
 }
 
 /* ========================== 반응형 */
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
+  .section .container {
+    max-width: 1000px;
+  }
+
+  .section_01 img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .section_02 .items {
+    gap: 30px;
+  }
+
+  .section_02 .items .item {
+    width: 180px;
+    height: 230px;
+  }
+
+  .section_03 .cards {
+    gap: 30px;
+  }
+
+  .section_03 .card {
+    width: 180px;
+    height: 280px;
+  }
+  .section_04 .slick-slider {
+    width: 900px;
+    margin: 0 auto;
+  }
 }
 
-@media (max-width: 400px) {
-  .menu {
-    width: 100%;
+@media (max-width: 992px) {
+  .section .container {
+    max-width: 840px;
   }
+
+  .section_01 img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .section_01 p {
+    font-size: 14px;
+    margin-bottom: 26px;
+  }
+
+  .section_02 .items {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+  }
+
+  .section_03 .cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .section_03 .card:hover {
+    transform: scale(1.05);
+  }
+
+  .section_04 .slick-slider {
+    width: 700px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header .snowman,
+  .header .snow {
+    top: 22%;
+    left: 50%;
+  }
+  .header .snowman {
+    width: 400px;
+    height: 400px;
+  }
+
+  .header .snow {
+    width: 530px;
+  }
+
+  .header h3 {
+    font-size: 23px;
+    bottom: 160px;
+  }
+
+  .section_01 {
+    margin-top: 50px;
+  }
+
+  .section_01 .item {
+    flex-direction: column;
+  }
+
+  .section_01 p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .section_01 .btn {
+    margin-bottom: 50px;
+  }
+
+  .section_02 {
+    padding-top: 50px;
+  }
+
+  .section_02 .items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .section_03 {
+    margin-top: 50px;
+  }
+
+  .section_03 .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .section_04 .banner_slick img {
+    width: 340px;
+    height: 340px;
+  }
+
+  .section_04 .slick-slider {
+    width: 420px;
+  }
+}
+
+@media (max-width: 320px) {
 }

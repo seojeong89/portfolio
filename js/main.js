@@ -21,7 +21,7 @@ $(function () {
     navigation: true,
     menu: ".nav",
     anchors: ["page1", "page2", "page3", "page4", "page5"],
-    responsive: 900,
+    responsive: 990,
   });
 
   // 프로필 모달
@@ -188,8 +188,30 @@ $(function () {
     slidesToShow: 5,
     slidesToScroll: 2,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     arrows: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
 
   // 섹션_04 배너 갤러리
